@@ -166,7 +166,7 @@
       
     <script type="text/javascript">
 	
-		$(".LOT_READ").unbind("focus").on("focus", function(e) {
+		$('.LOT_READ').unbind("focus").on("focus", function(e) {
 			var id = $(this).attr("id");
 			$(this).attr("readonly", true);
 			setTimeout(function() {
@@ -175,7 +175,7 @@
 		});
 		
 		//mobile keyboard display none
-		 $(".LOT_READ").unbind("click").on("click", function(e) {
+		 $('.LOT_READ').unbind("click").on("click", function(e) {
 			var id = $(this).attr("id");
 			$(this).attr("readonly", true);
 			setTimeout(function() {
@@ -627,7 +627,7 @@
 <body>
 	<div id="calculator">
         <form id="res">
-			<input id="result" type="text" class="LOT_READ" value="">
+			<input id="result" class="LOT_READ" type="text" value="">
 		</form>
 		<span class="key">det</span>
 		<span class="key">cross</span>

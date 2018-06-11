@@ -165,6 +165,23 @@
     </script>
       
     <script type="text/javascript">
+	
+		$(".LOT_READ").unbind("focus").on("focus", function(e) {
+			var id = $(this).attr("id");
+			$(this).attr("readonly", true);
+			setTimeout(function() {
+			  $("#" + id).attr("readonly", false);
+			}, 10);
+		});
+		
+		//mobile keyboard display none
+		 $(".LOT_READ").unbind("click").on("click", function(e) {
+			var id = $(this).attr("id");
+			$(this).attr("readonly", true);
+			setTimeout(function() {
+			  $("#" + id).attr("readonly", false);
+			}, 10);
+		  });
 		
 		$.fn.selectRange = function(start, end) {
 				if(end === undefined) {
@@ -610,7 +627,7 @@
 <body>
 	<div id="calculator">
         <form id="res">
-			<input id="result" type="text" value="">
+			<input id="result" type="text" class="LOT_READ" value="">
 		</form>
 		<span class="key">det</span>
 		<span class="key">cross</span>

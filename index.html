@@ -604,19 +604,19 @@
 				$("#result").focus();
 				
 				$("LOT_READ").unbind("focus").on("focus", function(e) {
-					var id = $(this).attr("id");
+					var id = $(this).attr("key");
 					$(this).attr("readonly", true);
 					setTimeout(function() {
-					  $("#" + id).attr("readonly", false);
+					  $("#" + key).attr("readonly", false);
 					}, 10);
 				});
 					
 				//mobile keyboard display none
 				 $("LOT_READ").unbind("click").on("click", function(e) {
-					var id = $(this).attr("id");
+					var id = $(this).attr("key");
 					$(this).attr("readonly", true);
 					setTimeout(function() {
-					  $("#" + id).attr("readonly", false);
+					  $("#" + key).attr("readonly", false);
 					}, 10);
 				});
 			})
